@@ -1,0 +1,22 @@
+{
+  "name": "hodldeck-backend",
+  "version": "0.0.1",
+  "description": "The backend for HODLDeck",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/jest-cli/bin/jest.js"
+  },
+  "author": "Stefan Lange-Hegermann <stefan@hodldeck.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.2",
+    "mustache-express": "^1.2.5",
+    "random-words": "^1.0.0",
+    "stellar-sdk": "^0.8.0"
+  },
+  "devDependencies": {
+    "jest": "^22.3.0"
+  }
+}
