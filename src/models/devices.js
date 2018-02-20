@@ -7,7 +7,7 @@ exports.getAll = function() {
 }
 
 exports.add = function() {
-    var key = randomWords(4).join("-")
+    var key = randomWords(3).join("-")
     devices[key]= {}
     return key;
 }

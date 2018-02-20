@@ -4,7 +4,8 @@
   "description": "The backend for HODLDeck",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/jest-cli/bin/jest.js"
+    "test": "./node_modules/jest-cli/bin/jest.js",
+    "start": "node index.js"
   },
   "author": "Stefan Lange-Hegermann <stefan@hodldeck.com>",
   "license": "MIT",

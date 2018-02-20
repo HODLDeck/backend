@@ -9,7 +9,7 @@ test('getAll returns an array', () => {
 
 test('add returns a new hash when addig a device', () => {
     var deviceId = devices.add();
-    expect(deviceId).toMatch(/[a-z]+-[a-z]+-[a-z]+-[a-z]+/)
+    expect(deviceId).toMatch(/^[a-z]+-[a-z]+-[a-z]+$/)
 })
 
 test('add returns a different hash every time a device is added', () => {
