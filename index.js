@@ -3,7 +3,7 @@ const express = require('express'),
       mustacheExpress = require('mustache-express'),
       bodyParser = require('body-parser'),
       api = require('./src/controllers/api'),
-      frontend = require('./src/controllers/frontend'),
+      frontend = require('./src/controllers/frontend')
 
 const app = express()
 
