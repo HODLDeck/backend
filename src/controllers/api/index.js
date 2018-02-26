@@ -8,7 +8,8 @@ router.use(function timeLog (req, res, next) {
   next()
 })
 // define the home page route
-router.get('/devices', devices.post)
+router.post('/devices', devices.post)
+router.get('/devices', devices.get)
 
 // define the about route
 router.get('/about', function (req, res) {
