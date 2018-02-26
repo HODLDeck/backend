@@ -19,5 +19,9 @@
   },
   "devDependencies": {
     "jest": "^22.3.0"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "yarn": "1.5.1"
   }
 }
