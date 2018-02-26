@@ -6,7 +6,7 @@ exports.getAll = function() {
     return devices;
 }
 
-exports.add = function(chipid) {
+exports.add = function(chipid, wallet) {
     var key = randomWords(3).join("-")
     devices[key]= {
         "chip":chipid,
