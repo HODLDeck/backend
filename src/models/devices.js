@@ -8,7 +8,10 @@ exports.getAll = function() {
 
 exports.add = function(chipid) {
     var key = randomWords(3).join("-")
-    devices[key]= {"chip":chipid}
+    devices[key]= {
+        "chip":chipid,
+        "wallet":wallet
+    }
     return key;
 }
 
