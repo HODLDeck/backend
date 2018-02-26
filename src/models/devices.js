@@ -6,9 +6,9 @@ exports.getAll = function() {
     return Object.keys(devices);
 }
 
-exports.add = function() {
+exports.add = function(chipid) {
     var key = randomWords(3).join("-")
-    devices[key]= {}
+    devices[key]= {"chip":chipid}
     return key;
 }
 
