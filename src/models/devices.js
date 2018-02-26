@@ -3,7 +3,7 @@ var StrKey = require('stellar-base').StrKey;
 var devices = {}
 
 exports.getAll = function() {
-    return Object.keys(devices);
+    return devices;
 }
 
 exports.add = function(chipid) {
