@@ -6,25 +6,30 @@ exports.getAll = function() {
     return devices;
 }
 
-exports.add = function(chipid, wallet) {
-    var key = randomWords(3).join("-")
-    devices[key]= {
-        "chip":chipid,
-        "wallet":wallet
+exports.add = function(chipid) {
+    if (!chipid) throw new Error("Invalid Chip ID")
+    if (typeof(devices[chipid]) !== "undefined") {
+        return devices[chipid]["key"]
     }
-    return key;
+    var key = randomWords(3).join("-")
+    devices[chipid]= {
+        "key":key,
+        "chip":chipid,
+        "wallet":""
+    }
+    return key
 }
 
-exports.setAddress = function(key, address) {
+exports.setAddress = function(chipid, address) {
     if (!StrKey.isValidEd25519PublicKey(address)) {
         throw new Error('not a valid address is invalid');
     }
-    devices[key]["address"] = address
+    devices[chipid]["address"] = address
 }
 
-exports.getAddress = function(key) {
-    if (typeof devices[key]["address"] == "undefined") {
-        throw new Error("Address for "+key+" has not been set")
+exports.getAddress = function(chipid) {
+    if (typeof devices[chipid]["address"] == "undefined" || devices[chipid]["address"]=="") {
+        throw new Error("Address for "+chipid+" has not been set")
     }
-    return devices[key]["address"]
+    return devices[chipid]["address"]
 }
