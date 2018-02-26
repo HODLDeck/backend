@@ -1,7 +1,7 @@
 # HODLdeck backend
 The HODLdeck node.js server
 
-This is a node backend for the HODLdeck device...
+__This is a node backend for the HODLdeck device...__
 
 device data is stored in memory ATM. You will need to reconfigure the device after every restart of the server.
 
