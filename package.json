@@ -15,6 +15,8 @@
     "express": "^4.16.2",
     "mustache-express": "^1.2.5",
     "random-words": "^1.0.0",
+    "socket.io": "^2.0.4",
+    "stellar-qr": "^0.0.5",
     "stellar-sdk": "^0.8.0"
   },
   "devDependencies": {
@@ -22,6 +24,6 @@
   },
   "engines": {
     "node": "8.9.4",
-    "yarn": "1.3.2"
+    "yarn": "1.5.1"
   }
 }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="//rawgit.com/milligram/milligram-themes/master/src/olive.css">
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <style>
+  .topspace {
+    margin-top:30px;
+  }
+
+  .hidden {
+    display:none;
+  }
+
+  .device {
+    border:80px solid #888888;
+    width:480px;
+    height:400px;
+    margin:auto;
+    border-radius:6px 6px 0 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+  }
+
+  #device_id {
+    font-size:16px;
+    text-align: center;
+    margin-top:35px;
+  }
+</style>
+</head>
+<body>
+  <div class="container topspace">
+    <div class="row">
+      <div class="column">
+        <h1>HODLdeck</h1>
+      </div>
+    </div>
+    <div class="row" id="screen_setup">
+        <div class="column">
+            <strong>Setup</strong>
+            <p>
+              Enter the magic words from your HODLdeck display and the PUBLIC address of your stellar wallet.
+            </p>
+          </div>
+      <div class="column">
+        <form>
+          <fieldset>
+            <label for="magicwords">Magic Words</label>
+            <input type="text" name="magicwords" placeholder="your-magic-words">
+            <label for="publickey">Public Key</label>
+            <input type="text" name="publickey" placeholder="PUBLIC Stellar Address">
+            <input class="button-primary" type="submit" value="Set Device Address" id="button_setup">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  <div class="row hidden" id="screen_transaction">
+      <div class="column">
+          <strong>Request Payment</strong>
+            <p>
+              Enter an amount in USD to request payment to your HODLdeck device wallet.
+            </p>
+        </div>
+      <div class="column">
+        <form>
+          <fieldset>
+            <label for="amount">Amount</label>
+            <input type="text" name="amount" placeholder="30.99">
+            <label for="publickey">Transaction description</label>
+            <input type="text" name="publickey" placeholder="COOL stuff">
+            <input class="button-primary" type="submit" value="Request Transaction" id="button_transaction">
+          </fieldset>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="device">
+        <div id="device_id">your-magic-words</div>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('http://localhost:4000');
+    socket.on('news', function (data) {
+      console.log(data);
+      socket.emit('my other event', { my: 'data' });
+    });
+
+    $("#button_setup").click(function(e) {
+      e.preventDefault()
+      $("#screen_setup").addClass("hidden")
+      $("#screen_transaction").removeClass("hidden")
+    })
+    $("#button_transaction").click(function(e) {
+      e.preventDefault()
+    })
+  </script>
+</body>
+</html>
