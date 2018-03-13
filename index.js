@@ -25,6 +25,6 @@ server.listen(port, function () {
 io.on('connection', function (socket) {
     socket.on('setKey', function (data) {
         devices.setAddress(data["magic-words"], data["address"])
-        console.log(devices.getAll);
+        console.log(devices.getAll());
     });
 });
