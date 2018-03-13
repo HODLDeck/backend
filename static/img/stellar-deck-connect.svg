@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="155.537" height="84" viewBox="0, 0, 155.537, 84">
+  <g id="Ebene_1" transform="translate(-11.333, -120.504)">
+    <path d="M146.601,149.554 C157.431,149.181 165.371,149.031 165.371,160.816 C165.371,178.775 126.816,186.557 112.279,186.557" fill-opacity="0" stroke="#5B6A72" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <path d="M13.833,123.004 L113.833,123.004 L113.833,203.004 L13.833,203.004 L13.833,123.004 z" fill="#DCF2F9"/>
+      <path d="M13.833,123.004 L113.833,123.004 L113.833,203.004 L13.833,203.004 L13.833,123.004 z" fill-opacity="0" stroke="#5B6A72" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path d="M28.833,138.004 L98.833,138.004 L98.833,188.004 L28.833,188.004 L28.833,138.004 z" fill="#333E43"/>
+      <path d="M28.833,138.004 L98.833,138.004 L98.833,188.004 L28.833,188.004 L28.833,138.004 z" fill-opacity="0" stroke="#5B6A72" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path d="M132.961,142.63 L146.007,142.63 L146.007,156.799 L132.961,156.799 L132.961,142.63 z" fill="#DCF2F9"/>
+      <path d="M132.961,142.63 L146.007,142.63 L146.007,156.799 L132.961,156.799 L132.961,142.63 z" fill-opacity="0" stroke="#5B6A72" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path d="M125.248,144.83 L132.961,144.83 L132.961,154.599 L125.248,154.599 L125.248,144.83 z" fill="#FFF891"/>
+      <path d="M125.248,144.83 L132.961,144.83 L132.961,154.599 L125.248,154.599 L125.248,144.83 z" fill-opacity="0" stroke="#5B6A72" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-  <link rel="stylesheet" href="//rawgit.com/milligram/milligram-themes/master/src/olive.css">
+  <link rel="stylesheet" href="/static/css/theme-stellar.css">
   <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
@@ -23,7 +23,7 @@
   }
 
   .device {
-    border:6px solid #888888;
+    border:6px solid #5b6a72;
     width:332px;
     height:252px;
     margin:auto;
@@ -37,9 +37,17 @@
     margin-top:35px;
   }
 
+  p {
+    clear:both
+  }
   img {
-    float:right;
-    margin: 0 6px 0 0;
+    margin: 0 12px 0 0;
+    
+  }
+
+  .imgwrapper {
+    width:190px;
+    float:left;
   }
 </style>
 </head>
@@ -53,11 +61,25 @@
     <div class="row" id="screen_setup">
         <div class="column">
             <strong>Setup</strong>
-            <p><img src="/static/img/stellar-deck.svg" height="60">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <p>
+              <div class="imgwrapper"><img src="/static/img/stellar-deck-connect.svg" height="95"></div>
+              Connect your HODLdeck device to a USB power adapter.
+            </p>
+            <p>
+              <div class="imgwrapper"><img src="/static/img/stellar-deck.svg" height="95"></div>
+              Set up your HODLdecks WIFI connection.
+            </p>
+            <p>
+              <div class="imgwrapper"><img src="/static/img/stellar-deck-magic.svg" height="95"></div>
               Enter the magic words from your HODLdeck display and the PUBLIC address of your stellar wallet.
             </p>
           </div>
       <div class="column">
+        <p>
         <form id="form_setup">
           <fieldset>
             <label for="magicwords">Magic Words</label>
@@ -67,6 +89,7 @@
             <input class="button-primary" type="submit" value="Set Device Address" id="button_setup">
           </fieldset>
         </form>
+      </p>
       </div>
     </div>
   <div class="row hidden" id="screen_transaction">
@@ -89,13 +112,6 @@
       </div>
       
     </div>
-  <div class="row">
-    <div class="column">
-      <div class="device">
-        <div id="device_id">your-magic-words</div>
-      </div>
-    </div>
-  </div>
 </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/stellar-sdk/0.8.0/stellar-sdk.js"></script>
   <script src="/socket.io/socket.io.js"></script>
