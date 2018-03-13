@@ -26,5 +26,6 @@ io.on('connection', function (socket) {
     socket.on('setKey', function (data) {
         devices.setAddress(data["magic-words"], data["address"])
         console.log(devices.getAll());
+        socket.emit("test", "nix")
     });
 });
