@@ -23,9 +23,9 @@
   }
 
   .device {
-    border:80px solid #888888;
-    width:480px;
-    height:400px;
+    border:6px solid #888888;
+    width:332px;
+    height:252px;
     margin:auto;
     border-radius:6px 6px 0 0;
     box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
@@ -53,12 +53,12 @@
             </p>
           </div>
       <div class="column">
-        <form>
+        <form id="form_setup">
           <fieldset>
             <label for="magicwords">Magic Words</label>
-            <input type="text" name="magicwords" placeholder="your-magic-words">
+            <input type="text" name="magicwords" placeholder="your-magic-words" id="input_setup_magic">
             <label for="publickey">Public Key</label>
-            <input type="text" name="publickey" placeholder="PUBLIC Stellar Address">
+            <input type="text" name="publickey" placeholder="PUBLIC Stellar Address" id="input_setup_address">
             <input class="button-primary" type="submit" value="Set Device Address" id="button_setup">
           </fieldset>
         </form>
@@ -84,7 +84,6 @@
       </div>
       
     </div>
-  </div>
   <div class="row">
     <div class="column">
       <div class="device">
@@ -92,22 +91,9 @@
       </div>
     </div>
   </div>
+</div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/stellar-sdk/0.8.0/stellar-sdk.js"></script>
   <script src="/socket.io/socket.io.js"></script>
-  <script>
-    var socket = io.connect('');
-    socket.on('news', function (data) {
-      console.log(data);
-      socket.emit('my other event', { my: 'data' });
-    });
-
-    $("#button_setup").click(function(e) {
-      e.preventDefault()
-      $("#screen_setup").addClass("hidden")
-      $("#screen_transaction").removeClass("hidden")
-    })
-    $("#button_transaction").click(function(e) {
-      e.preventDefault()
-    })
-  </script>
+  <script src="/static/js/index.js"></script>
 </body>
 </html>

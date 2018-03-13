@@ -1,6 +1,7 @@
 var randomWords = require('random-words');
 var StrKey = require('stellar-base').StrKey;
 var devices = {}
+var keymap={}
 
 exports.getAll = function() {
     return devices;
@@ -8,28 +9,32 @@ exports.getAll = function() {
 
 exports.add = function(chipid) {
     if (!chipid) throw new Error("Invalid Chip ID")
-    if (typeof(devices[chipid]) !== "undefined") {
-        return devices[chipid]["key"]
+    if (typeof(keymap[chipid]) !== "undefined") {
+        return keymap[chipid]
     }
     var key = randomWords(3).join("-")
-    devices[chipid]= {
+    devices[key]= {
         "key":key,
         "chip":chipid,
         "wallet":""
     }
+    keymap[chipid]=key
     return key
 }
 
-exports.setAddress = function(chipid, address) {
+exports.setAddress = function(key, address) {
     if (!StrKey.isValidEd25519PublicKey(address)) {
         throw new Error('not a valid address is invalid');
     }
-    devices[chipid]["address"] = address
+    if (typeof devices[key] === "undefined") {
+        throw new Error('device does not exist');
+    }
+    devices[key]["address"] = address
 }
 
-exports.getAddress = function(chipid) {
-    if (typeof devices[chipid]["address"] == "undefined" || devices[chipid]["address"]=="") {
-        throw new Error("Address for "+chipid+" has not been set")
+exports.getAddress = function(key) {
+    if (typeof devices[key]["address"] == "undefined" || devices[key]["address"]=="") {
+        throw new Error("Address for "+key+" has not been set")
     }
-    return devices[chipid]["address"]
+    return devices[key]["address"]
 }

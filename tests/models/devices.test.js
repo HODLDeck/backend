@@ -17,9 +17,9 @@ test('add returns a new hash when addig a device', () => {
 })
 
 test('add returns the same hash for the same device', () => {
-    var device1 = devices.add("1234");
-    var device2 = devices.add("1234");
-    expect(device1).toEqual(device2);
+    var key1 = devices.add("1234");
+    var key2 = devices.add("1234");
+    expect(key1).toEqual(key2);
 })
 
 test('add returns a different hash every time a device is added', () => {
@@ -29,10 +29,10 @@ test('add returns a different hash every time a device is added', () => {
 })
 
 test('getAll returns a device that has been added before', () => {
-    var device1 = devices.add("12345");
+    var key1 = devices.add("12345");
     var allDevices = devices.getAll();
-    expect(allDevices["12345"]).toEqual({
-        "key":device1,
+    expect(allDevices[key1]).toEqual({
+        "key":key1,
         "chip":"12345",
         "wallet":""
     });
@@ -50,14 +50,14 @@ test('setAddress does not allow private key to be set', () => {
 })
 
 test('setAddress does allow public address to be set', () => {
-    var device1 = devices.add("12345");
-    expect(() => {devices.setAddress("12345", samplePublicKey)}).not.toThrow();
+    var key = devices.add("12345");
+    expect(() => {devices.setAddress(key, samplePublicKey)}).not.toThrow();
 })
 
 test('getAddress returns the right address', () => {
-    var device1 = devices.add("12345")
-    devices.setAddress("12345", samplePublicKey)
-    expect(devices.getAddress("12345")).toEqual(samplePublicKey)
+    var key = devices.add("12345")
+    devices.setAddress(key, samplePublicKey)
+    expect(devices.getAddress(key)).toEqual(samplePublicKey)
 })
 
 test('getAddress throws when no address has been set', () => {
