@@ -4,11 +4,11 @@
   <g id="Ebene_1" transform="translate(-11.333, -12.833)">
     <g>
       <path d="M13.833,15.333 L113.833,15.333 L113.833,95.333 L13.833,95.333 L13.833,15.333 z" fill="#DEF3FB"/>
-      <path d="M13.833,15.333 L113.833,15.333 L113.833,95.333 L13.833,95.333 L13.833,15.333 z" fill-opacity="0" stroke="#5E6A71" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M13.833,15.333 L113.833,15.333 L113.833,95.333 L13.833,95.333 L13.833,15.333 z" fill-opacity="0" stroke="#5E6A71" stroke-width="3" stroke-linejoin="round"/>
     </g>
     <g>
       <path d="M28.833,30.333 L98.833,30.333 L98.833,80.333 L28.833,80.333 L28.833,30.333 z" fill="#FFFFFF"/>
-      <path d="M28.833,30.333 L98.833,30.333 L98.833,80.333 L28.833,80.333 L28.833,30.333 z" fill-opacity="0" stroke="#5E6A71" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M28.833,30.333 L98.833,30.333 L98.833,80.333 L28.833,80.333 L28.833,30.333 z" fill-opacity="0" stroke="#5E6A71" stroke-width="3" stroke-linejoin="round"/>
     </g>
     <g>
       <g>
@@ -34,6 +34,6 @@
         </g>
       </g>
     </g>
-    <path d="M40.667,72.333 L87,72.333" fill-opacity="0" stroke="#5E6A71" stroke-width="2"/>
+    <path d="M40.667,72.333 L87,72.333" fill-opacity="0" stroke="#5E6A71" stroke-width="3"/>
   </g>
 </svg>
