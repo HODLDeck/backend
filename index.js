@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
   
-server.listen(port, "127.0.0.1", function () {
+server.listen(port, function () {
     console.log('listening on port '+port)
 })
 
